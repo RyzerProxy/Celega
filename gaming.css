@@ -1,0 +1,604 @@
+*{
+  color:#eee;
+  margin:0px;
+  padding: 0px;
+  border: none;
+  box-sizing: border-box;
+}
+body{
+  background: linear-gradient(310deg, #6f1692ff, #25289aff, #108e72ff);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Noto Sans', sans-serif;
+}
+.color-inherit{
+  color: inherit;
+}
+.upperCase{
+  text-transform: uppercase;
+}
+.hidden{
+  display:none;
+}
+a:link {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+
+.nav {
+  z-index: 3;
+  position: fixed;
+  width:calc(100% - 30px);
+  top: 10px;
+  left:15px;
+  border-radius: 15px;
+  background-color:rgba(18, 20, 46, 0.841);
+  /* height:40px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 23px 15px;
+}
+.el--2 {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+.icon{
+  width: 30px;
+  height: 20px;
+}
+.right.icon{
+  visibility: hidden;
+}
+
+/* Start slider section */
+/* Start Slider base */
+.slider-frame {
+  /* box-sizing: unset; is a must 
+  or the sizes won't be accurate because i set it globally to (border-box) */
+  box-sizing: unset;
+  position: relative;
+  width: 100%;
+  /* the problem now is with height
+  since the the position is relative and the element inside is absolute */
+  /* this won't fix the problem */
+  /* height: auto; */
+  /* height: 720px; */
+  
+  /* I fixed it by playing with the aspect ratio */
+  /* padding is length is according to the element width
+  so 100% of padding-top will equal 100% of the width so the aspect will be 1:1 */
+  /* we need 16:9 aspect */
+  padding-top: 56.25%;
+  
+  /* check my first created slideshow to understand how the slider work */
+  overflow: hidden;
+}
+.slider {
+  /* it's container width multiplied by images number */
+  width: calc(100% * 4);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  animation-timing-function: ease-in;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  /* outline-style: dotted; */
+  transition: 1s ease; 
+}
+.slider-img {
+  /* it's container width divided by images number */
+  width: calc(100% / 4);
+  height: 100%;
+}
+/* END Slider base */
+
+.center{
+  z-index: 2;
+  backdrop-filter: blur(150px);
+  position: absolute;
+  border-radius:15px;
+  /* inline-size:30px; */
+  /* line-break: loose; */
+  text-align: center;
+  display: inline-block;
+  /* min-width: 532.783px; */
+  font-size: 5vw;
+  font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+.center>a{
+  /* display: inline-block; */
+}
+
+/* start slider buttons section */
+.slider-buttons{
+  z-index: 1;
+  position: absolute;
+  bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  /* the percentage must be the same in both margin and width */
+  --width: 45%;
+  margin-left: calc( calc(100% - max(var(--width) , 400px) )/2) ;
+  width: max(var(--width) , 400px );
+  align-items: center;
+}
+.custom-radio-btn {
+  display: inline-block;
+  width: 15%;
+  height: 10px;
+  position: relative;
+  border-radius: 30px;
+  background-color: #44444499;
+  overflow: hidden;
+  transition: 1s ease;
+}
+.custom-radio-btn:hover {
+  background: #25289aff;
+}
+.custom-radio-btn input {
+  display: none;
+}
+input:checked ~.checkmark{
+  display: inline-block;
+  background: #25289aff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: background-color 1s ease;
+}
+input:checked ~.checkmark:hover{
+  /* background-color: #bb0000; */
+}
+/* end slider buttons section */
+/* END slider section */
+
+
+.width-control {
+  width: 82%;
+  margin: auto;
+}
+/* str platform select */
+.Platform-select{
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* border: 2px solid red; */
+  padding: 15px;
+}
+
+.Platform-buttons{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  /* justify-content: space-around; */
+  align-items: center;
+  /* align-content: space-between; */
+  width: 400px;
+  min-height: 85px;
+}
+.Platform-buttons a{
+  /* height: 50px; */
+  display: inline-block;
+  border-radius: 50px;
+  /* background-color: #ffffcc; */
+  background-color: #12142eff;
+  padding: 13px 29px ;
+  /* margin: 5px 0 0 7px; */
+  /* margin: 0 15px; */
+  /* margin-bottom: 15px; */
+}
+
+.Platform-buttons a:hover{
+  background-color: #282c67;
+}
+/* end platform select */
+
+.container{
+  min-height: 600px;
+}
+
+.grid-games{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 48px;
+  row-gap: 48px;
+}
+
+.element{
+  background-color: rgba(56, 13, 73, 0.267);
+  /* min-width: 200px; */
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.22);
+  border-radius: 12px;
+  /* overflow: hidden; */
+}
+
+.aspect-rect{
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+  position: relative; /* If you want text inside of it */
+  overflow-y: clip;
+}
+
+.game-img {
+  display: inline;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.game-info {
+  margin: 0 24px;
+}
+
+.category {
+  font-size: 12px;
+  color: #ffffccb7;
+  text-transform: uppercase;
+}
+
+.list-info {
+  list-style: none;
+  margin-top: 16px;
+}
+
+.list-info li{
+  margin-top: 8px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: left;
+}
+
+.list-info li span{
+  margin-top: 8px;
+  color:rgb(226, 226, 226);
+}
+
+.price-box {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 16px;
+  margin-top: 16px;
+  margin-left: 24px;
+}
+
+.price {
+  font-size: 24px;
+}
+
+.Add-to-cart {
+  display: inline-block;
+  border: #202350 solid 5px;
+  border-radius: 52px;
+  padding: 8px 16px ;
+  margin: 0 16px;
+  background-color: #202350;
+}
+
+.Add-to-cart:hover {
+  cursor: pointer;
+  background-color: #12142eff;
+  border-color: #12142eff;
+}
+
+.testimonial-section-app {
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.22);
+  display: grid;
+  grid-template-columns: 2fr auto;
+  /* if smaller than 1400 1fr or auto only */
+  gap: 32px;
+  /* column-gap: 32px;
+  row-gap: 32px; */
+  justify-content: center;
+  align-items: center;
+  background-color: #12142eff;
+  color: #fff;
+  /* padding: 94px 84px; */
+  padding:min(94px , 3vw) min(84px , 3vw);
+  border-radius: 12px;
+  width: 90%;
+  margin: 150px auto 0;
+}
+
+/* .grid-3-cols-app {
+  display: flex;
+  flex-direction: row; */
+  /* margin: 0 52px; */
+  /* gap: 64px;
+} */
+
+.testimonial-box-app {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-self: center;
+}
+
+.promo-app {
+  /* font-size:52px; */
+  font-size: max(30px , 3.8vw);
+}
+
+.testimonial-text-app {
+  font-size: 20px;
+  font-size: max(15px , 1.8vw);
+  /* font-size: max(30px , 3.8vw); */
+  margin-top: 16px;
+  font-style:none;
+}
+
+.buttons-app {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  --b-height: max(61.4167px , 6.9vw);
+  --b-width: max(140.633px , 15.8vw);
+  --b-font-size: max(18.6833px , 2.1vw);
+}
+
+.download-app {
+  /* width: 180px; */
+  width: var(--b-width);
+  /* set max values to when window width 890px */
+  /* height: 80px; */
+  height: var(--b-height);
+  background-color: #25289aff;
+  border-radius: 50px;
+  /* font-size: 24px; */
+  /* =~ 2vw */
+  font-size: var(--b-font-size);
+}
+
+
+.download-app:hover {
+  cursor: pointer;
+  background-color: rgb(56, 59, 157);
+}
+
+.platform-app {
+  /* width: 180px; */
+  width: var(--b-width);
+  /* set max values to when window width 890px */
+  /* height: 80px; */
+  height: var(--b-height);
+  background-color: #6f1692ff;
+  border-radius: 50px;
+  font-size: var(--b-font-size);
+}
+
+.platform-app:hover {
+  cursor: pointer;
+  background-color: rgb(130, 59, 159);
+}
+
+.testimonial-image-app {
+  /* display: block; */
+  width: 512px;
+  width: 39vw;
+
+  height: 312px;
+  height: 23.76vw;
+
+  border-radius: 10px;
+}
+
+.testimonial-section {
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.22);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  /* if smaller than 1400 1fr or auto only */
+  gap: 52px;
+  /* column-gap: 32px;
+  row-gap: 32px; */
+  justify-content: center;
+  align-items: center;
+  background-color: #087f5b;
+  color: #fff;
+  /* padding: 24px; */
+  border-radius: 12px;
+  width: 90%;
+  /* padding: 94px 84px; */
+  padding:min(94px , 3vw) min(84px , 3vw);
+  margin: 150px auto 0;
+}
+
+.testimonial-image {
+  /* width: 256px;
+  height: 256px; */
+  align-self:center;
+  border-radius: 10px;
+}
+
+.testimonial-box {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  align-self: center;
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: #e6fcf5;
+  align-self: flex-start;
+}
+
+.testimonial-author {
+  color: #c3fae8;
+  align-self: center;
+}
+
+.price {
+  font-size: 24px;
+}
+
+/* Footer */
+.footer {
+  background-color: rgba(0, 0, 0, 0.218);
+  backdrop-filter: blur(100px);
+  margin-top: 86px;
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+.footer a{
+  font-size: 16px;
+}
+
+.container-footer {
+  display:flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.nav-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: min(20px , 3vw);
+  min-height: 48px;
+  /* width: 560px; */
+  width: min(560px , 90%);
+  margin: 0 auto;
+}
+
+.nav-footer a:link, .Rights ul a:link, .Rights p, .Our-model p, .footer a{
+  color: rgb(150, 150, 150);
+}
+
+.nav-footer a:hover, .Rights ul a:hover, .social-icons:hover{
+  cursor: pointer;
+  color: #fff;
+}
+
+.container-footer ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  min-height: 64px;
+  /* min-width: 500px; */
+  margin: 0 auto;
+}
+
+.Rights>p{
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.Rights ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: min(20px , 3vw);
+  min-height: 48px;
+  width: min(560px , 90%);
+  margin: 0 auto;
+}
+
+.Our-model p{
+  margin: 24px 0;
+}
+
+
+
+.pc{
+  /* background-color: red; */
+}
+.console{
+  background-color: green;
+}
+.mobile{
+  background-color: blue;
+}
+/* end this to be styled */
+
+
+
+@media screen and (max-width: 1450px){
+.grid-games{
+  grid-template-columns: 1fr 1fr 1fr;
+}
+}
+
+@media screen and (max-width: 1056px){
+  .grid-games{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* str responsive plat-buttons */
+@media screen and (max-width: 840px){
+.Platform-buttons{
+  /* align-items:flex-end; */
+  width: 141.367px;
+  flex-direction: column;
+  row-gap: 10px;
+}
+}
+/* end responsive plat-buttons */
+
+/* str effective responsive nav */
+@media screen and (max-width: 700px){
+  .nav {
+    display: block;
+  }
+
+  .el--2{
+    display: none;
+  }
+
+  .el--2.responsive{
+    padding-top: 10px;
+    display: block;
+    width: 100%;
+  }
+
+  .el--2.responsive a{
+    /* position: relative; */
+    display:block;
+    border-radius: 14px;
+    padding: 10px;
+    /* width: 100%; */
+  }
+  .el--2.responsive a:hover{
+    background-color: #000000bb;
+  }
+  
+  .right.icon{
+    visibility: visible;
+    position: absolute;
+    top: 35.05px;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  .grid-games{
+    grid-template-columns: 1fr;
+  }
+  .testimonial-section-app {
+    grid-template-columns: 1fr;
+  }
+  .testimonial-image-app {
+    width: 100%;
+    height: auto;
+  }
+}
+/* end effective responsive nav */

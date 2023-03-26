@@ -1,0 +1,107 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Start slider section */
+/* Start Slider base */
+.slider-frame {
+  /* box-sizing: unset; is a must 
+  or the sizes won't be accurate because i set it globally to (border-box) */
+  box-sizing: unset;
+  position: relative;
+  width: 100%;
+  /* the problem now is with height
+  since the the position is relative and the element inside is absolute */
+  /* this won't fix the problem */
+  /* height: auto; */
+  /* height: 720px; */
+  
+  /* I fixed it by playing with the aspect ratio */
+  /* padding is length is according to the element width
+  so 100% of padding-top will equal 100% of the width so the aspect will be 1:1 */
+  /* we need 16:9 aspect */
+  padding-top: 56.25%;
+  
+  /* check my first created slideshow to understand how the slider work */
+  overflow: hidden;
+}
+.slider {
+  /* it's container width multiplied by images number */
+  width: calc(100% * 4);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0%;
+  animation-timing-function: ease-in;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  outline-style: dotted;
+  transition: 1s ease; 
+}
+.slider-img {
+  /* it's container width divided by images number */
+  width: calc(100% / 4);
+  height: 100%;
+}
+/* END Slider base */
+
+.center{
+  z-index: 2;
+  backdrop-filter: blur(150px);
+  position: absolute;
+  border-radius:15px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 15px;
+  cursor: pointer;
+}
+
+/* start slider buttons section */
+.slider-buttons{
+  z-index: 1;
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  /* the percentage must be the same in both margin and width */
+  --width: 45%;
+  margin-left: calc( calc(100% - max(var(--width) , 400px) )/2) ;
+  width: max(var(--width) , 400px );
+  align-items: center;
+}
+.custom-radio-btn {
+  display: inline-block;
+  width: 15%;
+  height: 10px;
+  position: relative;
+  border-radius: 30px;
+  background-color: #44444499;
+  overflow: hidden;
+  transition: .4s ease;
+}
+.custom-radio-btn:hover {
+  background-color: #4444ff66;
+}
+.custom-radio-btn input {
+  display: none;
+}
+input:checked ~.checkmark{
+  display: inline-block;
+  background-color: red;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: background-color 1s ease;
+}
+input:checked ~.checkmark:hover{
+  background-color: #bb0000;
+}
+/* end slider buttons section */
+/* END slider section */

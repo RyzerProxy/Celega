@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.slider-frame {
+  /* box-sizing: unset; is a must 
+  or the sizes won't be accurate because i set it globally to (border-box) */
+  box-sizing: unset;
+  
+  margin: 50px auto;
+  width: 500px;
+  height: 300px;
+
+  /* remove overflow to understand how the slider work */
+  overflow: hidden;
+  border: 10px solid;
+  border-top-color: #856036;
+  border-left-color: #5d4426;
+  border-bottom-color: #856036;
+  border-right-color: #5d4426;
+  position: relative;
+}
+
+.slider {
+  /* it's container width multiplied by images number */
+  width: calc(100% * 4);
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation-name: slide;
+  animation-timing-function: ease-in;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  outline-style: dotted;
+}
+
+.slider-img {
+  width: 500px;
+  height: 300px;
+}
+
+/* the basic idea is: */
+/* since we have 4 img we need 4 times it shown. */
+/* so we divide 100% of full animation on the images number (4) */
+/* we have 25% time steps */
+/* 0%, 25%, 50%, 75% where 0% the begin of the slider and 75% the begin of the fourth img */
+/* 0 -100% -200% -300% for the images.*/
+/* the rest is manipulating time at our well */
+@keyframes slide {
+
+  20%{
+    left: 0%;
+  }
+  
+  25%{
+    left: -100%;
+  }
+  /* delay */
+  45%{
+    left: -100%;
+  }
+  
+  50%{
+    left: -200%;
+  }
+  /* delay */
+  70%{
+    left: -200%;
+  }
+
+  75%{
+    left: -300%;
+  }
+  /* delay */
+  95%{
+    left: -300%;
+
+  }
+  100%{
+    left: 0;
+  }
+}

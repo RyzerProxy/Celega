@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<!-- I made this by myself -->
+<!-- check my first created slideshow to understand how the slider work -->
+<!-- the challenge here is that now the size is variable. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="4 FSMBS full screen slideshow adding JS.css">
+</head>
+<body>
+  <!-- Start slideshow -->
+  <div class="slider-frame">
+    <!-- Start slider section -->
+    <div class="slider">
+      <img class='slider-img'  src="../1.jpg" alt="Image 1" /><img class='slider-img'  src="../2.jpg" alt="Image 2" /><img class='slider-img'  src="../3.jpg" alt="Image 3" /><img class='slider-img'  src="../4.jpg" alt="Image 4" />
+    </div>
+    <!-- END slider section -->
+    <div class="center">
+      <a href="#games">
+        FROM GAMERS TO GAMERS
+      </a>
+    </div>
+
+    <!-- Start buttons to control the slider -->
+    <div class="slider-buttons">
+      <label class="custom-radio-btn">
+        <input class="radio-img1" type="radio" name="radio-btn" id="radio1" onclick="sliderBtn(0)"  checked>
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="custom-radio-btn">
+        <input class="radio-img1" type="radio" name="radio-btn" id="radio2" onclick="sliderBtn(1)" >
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="custom-radio-btn">
+        <input class="radio-img1" type="radio" name="radio-btn" id="radio3" onclick="sliderBtn(2)" >
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="custom-radio-btn">
+        <input class="radio-img1" type="radio" name="radio-btn" id="radio4" onclick="sliderBtn(3)" >
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <!-- END buttons to control the slider -->
+  </div>
+  <!-- END slideshow -->
+  
+  <!-- <img class='slider-img'  src="../1.jpg" alt="Image 1" /
+  ><img class='slider-img'  src="../2.jpg" alt="Image 2" /
+  ><img class='slider-img'  src="../3.jpg" alt="Image 3" /
+  ><img class='slider-img'  src="../4.jpg" alt="Image 4" /> -->
+</body>
+<script src="4 slider action.js"></script>
+</html>

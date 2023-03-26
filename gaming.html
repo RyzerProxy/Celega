@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang='en-us'>
+
+<head>
+  <meta charset='utf-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keyword" content="Games, gaming, power">
+  <meta name="description" content="from gamers to gamers">
+  <title>Gamer Station</title>
+  <link rel="shortcut icon" href="Xlogo.png" type="image/x-icon" />
+
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="gaming.css">
+</head>
+
+<body>
+  <!-- start main nav -->
+  <div class="nav">
+    <img class="left icon" src="XlogoCut.png" alt="logo">
+    
+    <div id="navmenu" class="el--2">
+      <a href="#home">Home</a>
+      <a href="#Games">Games</a>
+      <a href="#About">About</a>
+      <a href="#Support">Support</a>
+    </div>
+    
+    <a class="right icon" href="javascript:void(0);" class="icon" onclick="navmenu()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  <!-- end main nav -->
+
+  <!-- Start slideshow -->
+  <div class="slider-frame">
+    <!-- Start slider section -->
+    <div class="slider">
+      <img class='slider-img'  src="tests/slideshow/1.jpg" alt="Image 1" /><img class='slider-img'  src="tests/slideshow/2.jpg" alt="Image 2" /><img class='slider-img'  src="tests/slideshow/3.jpg" alt="Image 3" /><img class='slider-img'  src="tests/slideshow/4.jpg" alt="Image 4" />
+    </div>
+    <!-- END slider section -->
+    <div class="center">
+      <a href="#goal">
+        FROM GAMERS
+        <br>TO GAMERS
+      </a>
+    </div>
+
+    <!-- Start buttons to control the slider -->
+    <div id="goal" class="slider-buttons">
+      <label class="custom-radio-btn">
+        <input class="radio-img1" type="radio" name="radio-btn" id="radio1" onclick="sliderBtn(0)"  checked>
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="custom-radio-btn">
+        <input class="radio-img1" type="radio" name="radio-btn" id="radio2" onclick="sliderBtn(1)" >
+        <span class="checkmark"></span>
+      </label>
+
+      <label class="custom-radio-btn">
+        <input class="radio-img1" type="radio" name="radio-btn" id="radio3" onclick="sliderBtn(2)" >
+        <span class="checkmark"></span>
+      </label>
+      
+      <label class="custom-radio-btn">
+        <input class="radio-img1" type="radio" name="radio-btn" id="radio4" onclick="sliderBtn(3)" >
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <!-- END buttons to control the slider -->
+  </div>
+  <!-- END slideshow -->
+
+  <div class="width-control">
+    <!-- str Featured Games buttons -->
+    <div class="Platform-select">
+      <h2>Select games platform</h2>
+      <!-- <br> -->
+      <div class="Platform-buttons">
+        <a href="javascript:void(0);" onclick="pc()">
+          PC
+        </a>
+        
+        <a href="javascript:void(0);" onclick="consoole()">
+          Consoles
+        </a>
+        
+        <a href="javascript:void(0);" onclick="smartphone()">
+          Mobile
+        </a>
+      </div>
+    </div>
+    <!-- end Featured Games buttons -->
+
+    <!-- str games sections -->
+    <section>
+
+      <!-- this related to js and hiding with buttons-->
+      <div id="PC" class="container pc">
+        <!-- all inside will be shown or hidden -->
+        <div class="grid-games">
+
+          <figure class="element">
+            <div class="aspect-rect">
+              <img class="game-img" width="100%" src="games/cod-bo2.jpg">
+            </div>
+            <div class="game-info">
+              <h3>Call Of Duty - BO2</h3>
+              <span class="category">Shooter Game</span>
+              <ul class="list-info">
+                <li>
+                  <svg class="game-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M221.7,34.3A8.1,8.1,0,0,0,216,32h0l-63.8.2a8.1,8.1,0,0,0-6.2,2.9L75.6,120.3,67.3,112a16.1,16.1,0,0,0-22.6,0L32,124.7a15.9,15.9,0,0,0,0,22.6l20.9,20.9-30,29.9a16.2,16.2,0,0,0,0,22.7l12.3,12.3a16.3,16.3,0,0,0,22.7,0l29.9-30L108.7,224a16.1,16.1,0,0,0,22.6,0L144,211.3a15.9,15.9,0,0,0,0-22.6l-8.3-8.3L220.9,110a8.1,8.1,0,0,0,2.9-6.2L224,40A8.1,8.1,0,0,0,221.7,34.3ZM207.8,100l-83.5,69-13-13,54.4-54.3a8.1,8.1,0,0,0-11.4-11.4L100,144.7l-13-13,69-83.5,52-.2Z"></path></svg>
+                  <span>New Weapons</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M228.9,49.7a8,8,0,0,0-6.8-1.5L160.9,63.5,99.6,32.8h-.1l-.8-.3h-.2l-.7-.2h-.3l-.7-.2H94.1l-64,16A8,8,0,0,0,24,56V200a7.8,7.8,0,0,0,3.1,6.3A7.9,7.9,0,0,0,32,208l1.9-.2,61.2-15.3,61.3,30.7h.1l.7.3h.1l.8.3h3.8l64-16A8,8,0,0,0,232,200V56A7.8,7.8,0,0,0,228.9,49.7ZM152,203.1l-48-24V52.9l48,24Z"></path></svg>
+                  <span>New Maps</span></li>
+              </ul>
+            </div>
+            <div class="price-box">
+              <Strong class="price">$50</Strong>
+              <button class="Add-to-cart">Add to Cart</button>
+            </div>
+          </figure>
+
+          <figure class="element">
+            <div class="aspect-rect">
+              <img class="game-img" width="100%" src="games/overwatch.jpg">
+            </div>
+            <div class="game-info">
+              <h3>Overwatch</h3>
+              <span class="category">Shooter Game</span>
+              <ul class="list-info">
+                <li>
+                  <svg class="game-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M221.7,34.3A8.1,8.1,0,0,0,216,32h0l-63.8.2a8.1,8.1,0,0,0-6.2,2.9L75.6,120.3,67.3,112a16.1,16.1,0,0,0-22.6,0L32,124.7a15.9,15.9,0,0,0,0,22.6l20.9,20.9-30,29.9a16.2,16.2,0,0,0,0,22.7l12.3,12.3a16.3,16.3,0,0,0,22.7,0l29.9-30L108.7,224a16.1,16.1,0,0,0,22.6,0L144,211.3a15.9,15.9,0,0,0,0-22.6l-8.3-8.3L220.9,110a8.1,8.1,0,0,0,2.9-6.2L224,40A8.1,8.1,0,0,0,221.7,34.3ZM207.8,100l-83.5,69-13-13,54.4-54.3a8.1,8.1,0,0,0-11.4-11.4L100,144.7l-13-13,69-83.5,52-.2Z"></path></svg>
+                  <span>New Weapons</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M228.9,49.7a8,8,0,0,0-6.8-1.5L160.9,63.5,99.6,32.8h-.1l-.8-.3h-.2l-.7-.2h-.3l-.7-.2H94.1l-64,16A8,8,0,0,0,24,56V200a7.8,7.8,0,0,0,3.1,6.3A7.9,7.9,0,0,0,32,208l1.9-.2,61.2-15.3,61.3,30.7h.1l.7.3h.1l.8.3h3.8l64-16A8,8,0,0,0,232,200V56A7.8,7.8,0,0,0,228.9,49.7ZM152,203.1l-48-24V52.9l48,24Z"></path></svg>
+                  <span>New Maps</span></li>
+              </ul>
+            </div>
+            <div class="price-box">
+              <Strong class="price">$65</Strong>
+              <button class="Add-to-cart">Add to Cart</button>
+            </div>
+          </figure>
+
+          <figure class="element">
+            <div class="aspect-rect">
+              <img  class="game-img" width="100%" src="games/code-ghosts.jpg">
+            </div>
+            <div class="game-info">
+              <h3>Call Of Duty - Ghosts</h3>
+              <span class="category">Shooter Game</span>
+              <ul class="list-info">
+                <li>
+                  <svg class="game-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M221.7,34.3A8.1,8.1,0,0,0,216,32h0l-63.8.2a8.1,8.1,0,0,0-6.2,2.9L75.6,120.3,67.3,112a16.1,16.1,0,0,0-22.6,0L32,124.7a15.9,15.9,0,0,0,0,22.6l20.9,20.9-30,29.9a16.2,16.2,0,0,0,0,22.7l12.3,12.3a16.3,16.3,0,0,0,22.7,0l29.9-30L108.7,224a16.1,16.1,0,0,0,22.6,0L144,211.3a15.9,15.9,0,0,0,0-22.6l-8.3-8.3L220.9,110a8.1,8.1,0,0,0,2.9-6.2L224,40A8.1,8.1,0,0,0,221.7,34.3ZM207.8,100l-83.5,69-13-13,54.4-54.3a8.1,8.1,0,0,0-11.4-11.4L100,144.7l-13-13,69-83.5,52-.2Z"></path></svg>
+                  <span>New Weapons</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M228.9,49.7a8,8,0,0,0-6.8-1.5L160.9,63.5,99.6,32.8h-.1l-.8-.3h-.2l-.7-.2h-.3l-.7-.2H94.1l-64,16A8,8,0,0,0,24,56V200a7.8,7.8,0,0,0,3.1,6.3A7.9,7.9,0,0,0,32,208l1.9-.2,61.2-15.3,61.3,30.7h.1l.7.3h.1l.8.3h3.8l64-16A8,8,0,0,0,232,200V56A7.8,7.8,0,0,0,228.9,49.7ZM152,203.1l-48-24V52.9l48,24Z"></path></svg>
+                  <span>New Maps</span></li>
+              </ul>
+            </div>
+            <div class="price-box">
+              <Strong class="price">$50</Strong>
+              <button class="Add-to-cart">Add to Cart</button>
+            </div>
+          </figure>
+
+          <figure class="element">
+            <div class="aspect-rect">
+              <img  class="game-img" width="100%" src="games/code-mw2.jpg">
+            </div>
+            <div class="game-info">
+              <h3>Call Of Duty - MW2</h3>
+              <span class="category">Shooter Game</span>
+              <ul class="list-info">
+                <li>
+                  <svg class="game-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M221.7,34.3A8.1,8.1,0,0,0,216,32h0l-63.8.2a8.1,8.1,0,0,0-6.2,2.9L75.6,120.3,67.3,112a16.1,16.1,0,0,0-22.6,0L32,124.7a15.9,15.9,0,0,0,0,22.6l20.9,20.9-30,29.9a16.2,16.2,0,0,0,0,22.7l12.3,12.3a16.3,16.3,0,0,0,22.7,0l29.9-30L108.7,224a16.1,16.1,0,0,0,22.6,0L144,211.3a15.9,15.9,0,0,0,0-22.6l-8.3-8.3L220.9,110a8.1,8.1,0,0,0,2.9-6.2L224,40A8.1,8.1,0,0,0,221.7,34.3ZM207.8,100l-83.5,69-13-13,54.4-54.3a8.1,8.1,0,0,0-11.4-11.4L100,144.7l-13-13,69-83.5,52-.2Z"></path></svg>
+                  <span>New Weapons</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M228.9,49.7a8,8,0,0,0-6.8-1.5L160.9,63.5,99.6,32.8h-.1l-.8-.3h-.2l-.7-.2h-.3l-.7-.2H94.1l-64,16A8,8,0,0,0,24,56V200a7.8,7.8,0,0,0,3.1,6.3A7.9,7.9,0,0,0,32,208l1.9-.2,61.2-15.3,61.3,30.7h.1l.7.3h.1l.8.3h3.8l64-16A8,8,0,0,0,232,200V56A7.8,7.8,0,0,0,228.9,49.7ZM152,203.1l-48-24V52.9l48,24Z"></path></svg>
+                  <span>New Maps</span></li>
+              </ul>
+            </div>
+            <div class="price-box">
+              <Strong class="price">$58</Strong>
+              <button class="Add-to-cart">Add to Cart</button>
+            </div>
+          </figure>
+
+          <figure class="element">
+            <div class="aspect-rect">
+              <img  class="game-img" width="100%" src="games/lol.jpg">
+            </div>
+            <div class="game-info">
+              <h3>League of Legends</h3>
+              <span class="category">Shooter Game</span>
+              <ul class="list-info">
+                <li>
+                  <svg class="game-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M221.7,34.3A8.1,8.1,0,0,0,216,32h0l-63.8.2a8.1,8.1,0,0,0-6.2,2.9L75.6,120.3,67.3,112a16.1,16.1,0,0,0-22.6,0L32,124.7a15.9,15.9,0,0,0,0,22.6l20.9,20.9-30,29.9a16.2,16.2,0,0,0,0,22.7l12.3,12.3a16.3,16.3,0,0,0,22.7,0l29.9-30L108.7,224a16.1,16.1,0,0,0,22.6,0L144,211.3a15.9,15.9,0,0,0,0-22.6l-8.3-8.3L220.9,110a8.1,8.1,0,0,0,2.9-6.2L224,40A8.1,8.1,0,0,0,221.7,34.3ZM207.8,100l-83.5,69-13-13,54.4-54.3a8.1,8.1,0,0,0-11.4-11.4L100,144.7l-13-13,69-83.5,52-.2Z"></path></svg>
+                  <span>New Weapons</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M228.9,49.7a8,8,0,0,0-6.8-1.5L160.9,63.5,99.6,32.8h-.1l-.8-.3h-.2l-.7-.2h-.3l-.7-.2H94.1l-64,16A8,8,0,0,0,24,56V200a7.8,7.8,0,0,0,3.1,6.3A7.9,7.9,0,0,0,32,208l1.9-.2,61.2-15.3,61.3,30.7h.1l.7.3h.1l.8.3h3.8l64-16A8,8,0,0,0,232,200V56A7.8,7.8,0,0,0,228.9,49.7ZM152,203.1l-48-24V52.9l48,24Z"></path></svg>
+                  <span>New Maps</span></li>
+              </ul>
+            </div>
+            <div class="price-box">
+              <Strong class="price">$30</Strong>
+              <button class="Add-to-cart">Add to Cart</button>
+            </div>
+          </figure>
+
+          <figure class="element">
+            <div class="aspect-rect">
+              <img  class="game-img" width="100%" src="games/minecraft.jpg">
+            </div>
+            <div class="game-info">
+              <h3>Minecraft</h3>
+              <span class="category">Shooter Game</span>
+              <ul class="list-info">
+                <li>
+                  <svg class="game-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M221.7,34.3A8.1,8.1,0,0,0,216,32h0l-63.8.2a8.1,8.1,0,0,0-6.2,2.9L75.6,120.3,67.3,112a16.1,16.1,0,0,0-22.6,0L32,124.7a15.9,15.9,0,0,0,0,22.6l20.9,20.9-30,29.9a16.2,16.2,0,0,0,0,22.7l12.3,12.3a16.3,16.3,0,0,0,22.7,0l29.9-30L108.7,224a16.1,16.1,0,0,0,22.6,0L144,211.3a15.9,15.9,0,0,0,0-22.6l-8.3-8.3L220.9,110a8.1,8.1,0,0,0,2.9-6.2L224,40A8.1,8.1,0,0,0,221.7,34.3ZM207.8,100l-83.5,69-13-13,54.4-54.3a8.1,8.1,0,0,0-11.4-11.4L100,144.7l-13-13,69-83.5,52-.2Z"></path></svg>
+                  <span>New Weapons</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M228.9,49.7a8,8,0,0,0-6.8-1.5L160.9,63.5,99.6,32.8h-.1l-.8-.3h-.2l-.7-.2h-.3l-.7-.2H94.1l-64,16A8,8,0,0,0,24,56V200a7.8,7.8,0,0,0,3.1,6.3A7.9,7.9,0,0,0,32,208l1.9-.2,61.2-15.3,61.3,30.7h.1l.7.3h.1l.8.3h3.8l64-16A8,8,0,0,0,232,200V56A7.8,7.8,0,0,0,228.9,49.7ZM152,203.1l-48-24V52.9l48,24Z"></path></svg>
+                  <span>New Maps</span></li>
+              </ul>
+            </div>
+            <div class="price-box">
+              <Strong class="price">$50</Strong>
+              <button class="Add-to-cart">Add to Cart</button>
+            </div>
+          </figure>
+
+          <figure class="element">
+            <div class="aspect-rect">
+              <img  class="game-img" width="100%" src="games/fifa19.jpg">
+            </div>
+            <div class="game-info">
+              <h3>FIFA 19</h3>
+              <span class="category">Shooter Game</span>
+              <ul class="list-info">
+                <li>
+                  <svg class="game-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M221.7,34.3A8.1,8.1,0,0,0,216,32h0l-63.8.2a8.1,8.1,0,0,0-6.2,2.9L75.6,120.3,67.3,112a16.1,16.1,0,0,0-22.6,0L32,124.7a15.9,15.9,0,0,0,0,22.6l20.9,20.9-30,29.9a16.2,16.2,0,0,0,0,22.7l12.3,12.3a16.3,16.3,0,0,0,22.7,0l29.9-30L108.7,224a16.1,16.1,0,0,0,22.6,0L144,211.3a15.9,15.9,0,0,0,0-22.6l-8.3-8.3L220.9,110a8.1,8.1,0,0,0,2.9-6.2L224,40A8.1,8.1,0,0,0,221.7,34.3ZM207.8,100l-83.5,69-13-13,54.4-54.3a8.1,8.1,0,0,0-11.4-11.4L100,144.7l-13-13,69-83.5,52-.2Z"></path></svg>
+                  <span>New Weapons</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M228.9,49.7a8,8,0,0,0-6.8-1.5L160.9,63.5,99.6,32.8h-.1l-.8-.3h-.2l-.7-.2h-.3l-.7-.2H94.1l-64,16A8,8,0,0,0,24,56V200a7.8,7.8,0,0,0,3.1,6.3A7.9,7.9,0,0,0,32,208l1.9-.2,61.2-15.3,61.3,30.7h.1l.7.3h.1l.8.3h3.8l64-16A8,8,0,0,0,232,200V56A7.8,7.8,0,0,0,228.9,49.7ZM152,203.1l-48-24V52.9l48,24Z"></path></svg>
+                  <span>New Maps</span></li>
+              </ul>
+            </div>
+            <div class="price-box">
+              <Strong class="price">$50</Strong>
+              <button class="Add-to-cart">Add to Cart</button>
+            </div>
+          </figure>
+
+          <figure class="element">
+            <div class="aspect-rect">
+              <img  class="game-img" width="100%" src="games/cod-bo3.jpg">
+            </div>
+            <div class="game-info">
+              <h3>Call Of Duty - BO3</h3>
+              <span class="category">Shooter Game</span>
+              <ul class="list-info">
+                <li>
+                  <svg class="game-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M221.7,34.3A8.1,8.1,0,0,0,216,32h0l-63.8.2a8.1,8.1,0,0,0-6.2,2.9L75.6,120.3,67.3,112a16.1,16.1,0,0,0-22.6,0L32,124.7a15.9,15.9,0,0,0,0,22.6l20.9,20.9-30,29.9a16.2,16.2,0,0,0,0,22.7l12.3,12.3a16.3,16.3,0,0,0,22.7,0l29.9-30L108.7,224a16.1,16.1,0,0,0,22.6,0L144,211.3a15.9,15.9,0,0,0,0-22.6l-8.3-8.3L220.9,110a8.1,8.1,0,0,0,2.9-6.2L224,40A8.1,8.1,0,0,0,221.7,34.3ZM207.8,100l-83.5,69-13-13,54.4-54.3a8.1,8.1,0,0,0-11.4-11.4L100,144.7l-13-13,69-83.5,52-.2Z"></path></svg>
+                  <span>New Weapons</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M228.9,49.7a8,8,0,0,0-6.8-1.5L160.9,63.5,99.6,32.8h-.1l-.8-.3h-.2l-.7-.2h-.3l-.7-.2H94.1l-64,16A8,8,0,0,0,24,56V200a7.8,7.8,0,0,0,3.1,6.3A7.9,7.9,0,0,0,32,208l1.9-.2,61.2-15.3,61.3,30.7h.1l.7.3h.1l.8.3h3.8l64-16A8,8,0,0,0,232,200V56A7.8,7.8,0,0,0,228.9,49.7ZM152,203.1l-48-24V52.9l48,24Z"></path></svg>
+                  <span>New Maps</span></li>
+              </ul>
+            </div>
+            <div class="price-box">
+              <Strong class="price">$50</Strong>
+              <button class="Add-to-cart">Add to Cart</button>
+            </div>
+          </figure>
+
+          <figure class="element">
+            <div class="aspect-rect">
+              <img class="game-img" width="100%" src="games/cod-bo2.jpg">
+            </div>
+            <div class="game-info">
+              <h3>Call Of Duty - BO2</h3>
+              <span class="category">Shooter Game</span>
+              <ul class="list-info">
+                <li>
+                  <svg class="game-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M221.7,34.3A8.1,8.1,0,0,0,216,32h0l-63.8.2a8.1,8.1,0,0,0-6.2,2.9L75.6,120.3,67.3,112a16.1,16.1,0,0,0-22.6,0L32,124.7a15.9,15.9,0,0,0,0,22.6l20.9,20.9-30,29.9a16.2,16.2,0,0,0,0,22.7l12.3,12.3a16.3,16.3,0,0,0,22.7,0l29.9-30L108.7,224a16.1,16.1,0,0,0,22.6,0L144,211.3a15.9,15.9,0,0,0,0-22.6l-8.3-8.3L220.9,110a8.1,8.1,0,0,0,2.9-6.2L224,40A8.1,8.1,0,0,0,221.7,34.3ZM207.8,100l-83.5,69-13-13,54.4-54.3a8.1,8.1,0,0,0-11.4-11.4L100,144.7l-13-13,69-83.5,52-.2Z"></path></svg>
+                  <span>New Weapons</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M228.9,49.7a8,8,0,0,0-6.8-1.5L160.9,63.5,99.6,32.8h-.1l-.8-.3h-.2l-.7-.2h-.3l-.7-.2H94.1l-64,16A8,8,0,0,0,24,56V200a7.8,7.8,0,0,0,3.1,6.3A7.9,7.9,0,0,0,32,208l1.9-.2,61.2-15.3,61.3,30.7h.1l.7.3h.1l.8.3h3.8l64-16A8,8,0,0,0,232,200V56A7.8,7.8,0,0,0,228.9,49.7ZM152,203.1l-48-24V52.9l48,24Z"></path></svg>
+                  <span>New Maps</span></li>
+              </ul>
+            </div>
+            <div class="price-box">
+              <Strong class="price">$50</Strong>
+              <button class="Add-to-cart">Add to Cart</button>
+            </div>
+          </figure>
+
+          <figure class="element">
+            <div class="aspect-rect">
+              <img class="game-img" width="100%" src="games/overwatch.jpg">
+            </div>
+            <div class="game-info">
+              <h3>Overwatch</h3>
+              <span class="category">Shooter Game</span>
+              <ul class="list-info">
+                <li>
+                  <svg class="game-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M221.7,34.3A8.1,8.1,0,0,0,216,32h0l-63.8.2a8.1,8.1,0,0,0-6.2,2.9L75.6,120.3,67.3,112a16.1,16.1,0,0,0-22.6,0L32,124.7a15.9,15.9,0,0,0,0,22.6l20.9,20.9-30,29.9a16.2,16.2,0,0,0,0,22.7l12.3,12.3a16.3,16.3,0,0,0,22.7,0l29.9-30L108.7,224a16.1,16.1,0,0,0,22.6,0L144,211.3a15.9,15.9,0,0,0,0-22.6l-8.3-8.3L220.9,110a8.1,8.1,0,0,0,2.9-6.2L224,40A8.1,8.1,0,0,0,221.7,34.3ZM207.8,100l-83.5,69-13-13,54.4-54.3a8.1,8.1,0,0,0-11.4-11.4L100,144.7l-13-13,69-83.5,52-.2Z"></path></svg>
+                  <span>New Weapons</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M228.9,49.7a8,8,0,0,0-6.8-1.5L160.9,63.5,99.6,32.8h-.1l-.8-.3h-.2l-.7-.2h-.3l-.7-.2H94.1l-64,16A8,8,0,0,0,24,56V200a7.8,7.8,0,0,0,3.1,6.3A7.9,7.9,0,0,0,32,208l1.9-.2,61.2-15.3,61.3,30.7h.1l.7.3h.1l.8.3h3.8l64-16A8,8,0,0,0,232,200V56A7.8,7.8,0,0,0,228.9,49.7ZM152,203.1l-48-24V52.9l48,24Z"></path></svg>
+                  <span>New Maps</span></li>
+              </ul>
+            </div>
+            <div class="price-box">
+              <Strong class="price">$65</Strong>
+              <button class="Add-to-cart">Add to Cart</button>
+            </div>
+          </figure>
+
+          <figure class="element">
+            <div class="aspect-rect">
+              <img  class="game-img" width="100%" src="games/code-ghosts.jpg">
+            </div>
+            <div class="game-info">
+              <h3>Call Of Duty - Ghosts</h3>
+              <span class="category">Shooter Game</span>
+              <ul class="list-info">
+                <li>
+                  <svg class="game-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M221.7,34.3A8.1,8.1,0,0,0,216,32h0l-63.8.2a8.1,8.1,0,0,0-6.2,2.9L75.6,120.3,67.3,112a16.1,16.1,0,0,0-22.6,0L32,124.7a15.9,15.9,0,0,0,0,22.6l20.9,20.9-30,29.9a16.2,16.2,0,0,0,0,22.7l12.3,12.3a16.3,16.3,0,0,0,22.7,0l29.9-30L108.7,224a16.1,16.1,0,0,0,22.6,0L144,211.3a15.9,15.9,0,0,0,0-22.6l-8.3-8.3L220.9,110a8.1,8.1,0,0,0,2.9-6.2L224,40A8.1,8.1,0,0,0,221.7,34.3ZM207.8,100l-83.5,69-13-13,54.4-54.3a8.1,8.1,0,0,0-11.4-11.4L100,144.7l-13-13,69-83.5,52-.2Z"></path></svg>
+                  <span>New Weapons</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M228.9,49.7a8,8,0,0,0-6.8-1.5L160.9,63.5,99.6,32.8h-.1l-.8-.3h-.2l-.7-.2h-.3l-.7-.2H94.1l-64,16A8,8,0,0,0,24,56V200a7.8,7.8,0,0,0,3.1,6.3A7.9,7.9,0,0,0,32,208l1.9-.2,61.2-15.3,61.3,30.7h.1l.7.3h.1l.8.3h3.8l64-16A8,8,0,0,0,232,200V56A7.8,7.8,0,0,0,228.9,49.7ZM152,203.1l-48-24V52.9l48,24Z"></path></svg>
+                  <span>New Maps</span></li>
+              </ul>
+            </div>
+            <div class="price-box">
+              <Strong class="price">$50</Strong>
+              <button class="Add-to-cart">Add to Cart</button>
+            </div>
+          </figure>
+
+          <figure class="element">
+            <div class="aspect-rect">
+              <img  class="game-img" width="100%" src="games/code-mw2.jpg">
+            </div>
+            <div class="game-info">
+              <h3>Call Of Duty - MW2</h3>
+              <span class="category">Shooter Game</span>
+              <ul class="list-info">
+                <li>
+                  <svg class="game-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M221.7,34.3A8.1,8.1,0,0,0,216,32h0l-63.8.2a8.1,8.1,0,0,0-6.2,2.9L75.6,120.3,67.3,112a16.1,16.1,0,0,0-22.6,0L32,124.7a15.9,15.9,0,0,0,0,22.6l20.9,20.9-30,29.9a16.2,16.2,0,0,0,0,22.7l12.3,12.3a16.3,16.3,0,0,0,22.7,0l29.9-30L108.7,224a16.1,16.1,0,0,0,22.6,0L144,211.3a15.9,15.9,0,0,0,0-22.6l-8.3-8.3L220.9,110a8.1,8.1,0,0,0,2.9-6.2L224,40A8.1,8.1,0,0,0,221.7,34.3ZM207.8,100l-83.5,69-13-13,54.4-54.3a8.1,8.1,0,0,0-11.4-11.4L100,144.7l-13-13,69-83.5,52-.2Z"></path></svg>
+                  <span>New Weapons</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M228.9,49.7a8,8,0,0,0-6.8-1.5L160.9,63.5,99.6,32.8h-.1l-.8-.3h-.2l-.7-.2h-.3l-.7-.2H94.1l-64,16A8,8,0,0,0,24,56V200a7.8,7.8,0,0,0,3.1,6.3A7.9,7.9,0,0,0,32,208l1.9-.2,61.2-15.3,61.3,30.7h.1l.7.3h.1l.8.3h3.8l64-16A8,8,0,0,0,232,200V56A7.8,7.8,0,0,0,228.9,49.7ZM152,203.1l-48-24V52.9l48,24Z"></path></svg>
+                  <span>New Maps</span></li>
+              </ul>
+            </div>
+            <div class="price-box">
+              <Strong class="price">$58</Strong>
+              <button class="Add-to-cart">Add to Cart</button>
+            </div>
+          </figure>
+
+          <figure class="element">
+            <div class="aspect-rect">
+              <img  class="game-img" width="100%" src="games/lol.jpg">
+            </div>
+            <div class="game-info">
+              <h3>League of Legends</h3>
+              <span class="category">Shooter Game</span>
+              <ul class="list-info">
+                <li>
+                  <svg class="game-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M221.7,34.3A8.1,8.1,0,0,0,216,32h0l-63.8.2a8.1,8.1,0,0,0-6.2,2.9L75.6,120.3,67.3,112a16.1,16.1,0,0,0-22.6,0L32,124.7a15.9,15.9,0,0,0,0,22.6l20.9,20.9-30,29.9a16.2,16.2,0,0,0,0,22.7l12.3,12.3a16.3,16.3,0,0,0,22.7,0l29.9-30L108.7,224a16.1,16.1,0,0,0,22.6,0L144,211.3a15.9,15.9,0,0,0,0-22.6l-8.3-8.3L220.9,110a8.1,8.1,0,0,0,2.9-6.2L224,40A8.1,8.1,0,0,0,221.7,34.3ZM207.8,100l-83.5,69-13-13,54.4-54.3a8.1,8.1,0,0,0-11.4-11.4L100,144.7l-13-13,69-83.5,52-.2Z"></path></svg>
+                  <span>New Weapons</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M228.9,49.7a8,8,0,0,0-6.8-1.5L160.9,63.5,99.6,32.8h-.1l-.8-.3h-.2l-.7-.2h-.3l-.7-.2H94.1l-64,16A8,8,0,0,0,24,56V200a7.8,7.8,0,0,0,3.1,6.3A7.9,7.9,0,0,0,32,208l1.9-.2,61.2-15.3,61.3,30.7h.1l.7.3h.1l.8.3h3.8l64-16A8,8,0,0,0,232,200V56A7.8,7.8,0,0,0,228.9,49.7ZM152,203.1l-48-24V52.9l48,24Z"></path></svg>
+                  <span>New Maps</span></li>
+              </ul>
+            </div>
+            <div class="price-box">
+              <Strong class="price">$30</Strong>
+              <button class="Add-to-cart">Add to Cart</button>
+            </div>
+          </figure>
+
+          <figure class="element">
+            <div class="aspect-rect">
+              <img  class="game-img" width="100%" src="games/minecraft.jpg">
+            </div>
+            <div class="game-info">
+              <h3>Minecraft</h3>
+              <span class="category">Shooter Game</span>
+              <ul class="list-info">
+                <li>
+                  <svg class="game-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M221.7,34.3A8.1,8.1,0,0,0,216,32h0l-63.8.2a8.1,8.1,0,0,0-6.2,2.9L75.6,120.3,67.3,112a16.1,16.1,0,0,0-22.6,0L32,124.7a15.9,15.9,0,0,0,0,22.6l20.9,20.9-30,29.9a16.2,16.2,0,0,0,0,22.7l12.3,12.3a16.3,16.3,0,0,0,22.7,0l29.9-30L108.7,224a16.1,16.1,0,0,0,22.6,0L144,211.3a15.9,15.9,0,0,0,0-22.6l-8.3-8.3L220.9,110a8.1,8.1,0,0,0,2.9-6.2L224,40A8.1,8.1,0,0,0,221.7,34.3ZM207.8,100l-83.5,69-13-13,54.4-54.3a8.1,8.1,0,0,0-11.4-11.4L100,144.7l-13-13,69-83.5,52-.2Z"></path></svg>
+                  <span>New Weapons</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M228.9,49.7a8,8,0,0,0-6.8-1.5L160.9,63.5,99.6,32.8h-.1l-.8-.3h-.2l-.7-.2h-.3l-.7-.2H94.1l-64,16A8,8,0,0,0,24,56V200a7.8,7.8,0,0,0,3.1,6.3A7.9,7.9,0,0,0,32,208l1.9-.2,61.2-15.3,61.3,30.7h.1l.7.3h.1l.8.3h3.8l64-16A8,8,0,0,0,232,200V56A7.8,7.8,0,0,0,228.9,49.7ZM152,203.1l-48-24V52.9l48,24Z"></path></svg>
+                  <span>New Maps</span></li>
+              </ul>
+            </div>
+            <div class="price-box">
+              <Strong class="price">$50</Strong>
+              <button class="Add-to-cart">Add to Cart</button>
+            </div>
+          </figure>
+
+          <figure class="element">
+            <div class="aspect-rect">
+              <img  class="game-img" width="100%" src="games/fifa19.jpg">
+            </div>
+            <div class="game-info">
+              <h3>FIFA 19</h3>
+              <span class="category">Shooter Game</span>
+              <ul class="list-info">
+                <li>
+                  <svg class="game-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M221.7,34.3A8.1,8.1,0,0,0,216,32h0l-63.8.2a8.1,8.1,0,0,0-6.2,2.9L75.6,120.3,67.3,112a16.1,16.1,0,0,0-22.6,0L32,124.7a15.9,15.9,0,0,0,0,22.6l20.9,20.9-30,29.9a16.2,16.2,0,0,0,0,22.7l12.3,12.3a16.3,16.3,0,0,0,22.7,0l29.9-30L108.7,224a16.1,16.1,0,0,0,22.6,0L144,211.3a15.9,15.9,0,0,0,0-22.6l-8.3-8.3L220.9,110a8.1,8.1,0,0,0,2.9-6.2L224,40A8.1,8.1,0,0,0,221.7,34.3ZM207.8,100l-83.5,69-13-13,54.4-54.3a8.1,8.1,0,0,0-11.4-11.4L100,144.7l-13-13,69-83.5,52-.2Z"></path></svg>
+                  <span>New Weapons</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M228.9,49.7a8,8,0,0,0-6.8-1.5L160.9,63.5,99.6,32.8h-.1l-.8-.3h-.2l-.7-.2h-.3l-.7-.2H94.1l-64,16A8,8,0,0,0,24,56V200a7.8,7.8,0,0,0,3.1,6.3A7.9,7.9,0,0,0,32,208l1.9-.2,61.2-15.3,61.3,30.7h.1l.7.3h.1l.8.3h3.8l64-16A8,8,0,0,0,232,200V56A7.8,7.8,0,0,0,228.9,49.7ZM152,203.1l-48-24V52.9l48,24Z"></path></svg>
+                  <span>New Maps</span></li>
+              </ul>
+            </div>
+            <div class="price-box">
+              <Strong class="price">$50</Strong>
+              <button class="Add-to-cart">Add to Cart</button>
+            </div>
+          </figure>
+
+          <figure class="element">
+            <div class="aspect-rect">
+              <img  class="game-img" width="100%" src="games/cod-bo3.jpg">
+            </div>
+            <div class="game-info">
+              <h3>Call Of Duty - BO3</h3>
+              <span class="category">Shooter Game</span>
+              <ul class="list-info">
+                <li>
+                  <svg class="game-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M221.7,34.3A8.1,8.1,0,0,0,216,32h0l-63.8.2a8.1,8.1,0,0,0-6.2,2.9L75.6,120.3,67.3,112a16.1,16.1,0,0,0-22.6,0L32,124.7a15.9,15.9,0,0,0,0,22.6l20.9,20.9-30,29.9a16.2,16.2,0,0,0,0,22.7l12.3,12.3a16.3,16.3,0,0,0,22.7,0l29.9-30L108.7,224a16.1,16.1,0,0,0,22.6,0L144,211.3a15.9,15.9,0,0,0,0-22.6l-8.3-8.3L220.9,110a8.1,8.1,0,0,0,2.9-6.2L224,40A8.1,8.1,0,0,0,221.7,34.3ZM207.8,100l-83.5,69-13-13,54.4-54.3a8.1,8.1,0,0,0-11.4-11.4L100,144.7l-13-13,69-83.5,52-.2Z"></path></svg>
+                  <span>New Weapons</span>
+                </li>
+                <li>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M228.9,49.7a8,8,0,0,0-6.8-1.5L160.9,63.5,99.6,32.8h-.1l-.8-.3h-.2l-.7-.2h-.3l-.7-.2H94.1l-64,16A8,8,0,0,0,24,56V200a7.8,7.8,0,0,0,3.1,6.3A7.9,7.9,0,0,0,32,208l1.9-.2,61.2-15.3,61.3,30.7h.1l.7.3h.1l.8.3h3.8l64-16A8,8,0,0,0,232,200V56A7.8,7.8,0,0,0,228.9,49.7ZM152,203.1l-48-24V52.9l48,24Z"></path></svg>
+                  <span>New Maps</span></li>
+              </ul>
+            </div>
+            <div class="price-box">
+              <Strong class="price">$50</Strong>
+              <button class="Add-to-cart">Add to Cart</button>
+            </div>
+          </figure>
+        </div>
+      </div>
+      
+      <!-- this related to js and hiding with buttons-->
+      <div id="Console" class="container hidden console">
+        <!-- all inside will be shown or hidden -->
+        console
+      </div>
+
+      <!-- this related to js and hiding with buttons-->
+      <div id="Mobile" class="container hidden mobile">
+        <!-- all inside will be shown or hidden -->  
+        mobile
+      </div>
+    </section>
+  <!-- end .width-control -->
+  </div>
+  <!-- end games sections -->
+
+  <section class="testimonial-section-app">
+    <div class="testimonial-box-app">
+      <h3 class="promo-app">Download Our Application</h3>
+      <p class="testimonial-text-app">
+        All of your favorite games in ONE place.
+      </p>
+      <div class="buttons-app">
+        <button class="download-app">Download</button>
+        <button class="platform-app">Platforms</button>
+      </div>
+    </div>
+    <div>
+      <img class="testimonial-image-app" src="./games/istock-18586699-monkey-computer_brick_ImageSaizeReducer.jpg" alt="People sitting on chairs" />
+    </div>
+  </section>
+
+  <section class="testimonial-section">
+    <img class="testimonial-image" src="./games/monky flip.gif" alt="People sitting on chairs" />
+    <div class="testimonial-box">
+      <h2>"We couldn't live without these games anymore."</h2>
+      <blockquote class="testimonial-text">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+        repellat at, nesciunt quia cum minima ipsum culpa totam sapiente
+        recusandae earum debitis doloribus in quasi voluptatibus!
+      </blockquote>
+      <p class="testimonial-author">&mdash; Mary and Sarah Johnson</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container-footer">
+
+      <div class="nav-footer">
+        <a>ABOUT</a>
+        <p>|</p>
+        <a>CAREERS</a>
+        <p>|</p>
+        <a>CONTACT US</a>
+        <p>|</p>
+        <a>API</a>
+      </div>
+
+      <ul>
+        <li>
+          <svg class="social-icons" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M232,128a104.3,104.3,0,0,1-91.5,103.3,4.1,4.1,0,0,1-4.5-4V152h24a8,8,0,0,0,8-8.5,8.2,8.2,0,0,0-8.3-7.5H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,8-8.5,8.2,8.2,0,0,0-8.3-7.5H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0-8,8.5,8.2,8.2,0,0,0,8.3,7.5H120v75.3a4,4,0,0,1-4.4,4C62.8,224.9,22,179,24.1,124.1A104,104,0,0,1,232,128Z"></path></svg>
+        </li>
+        <li>
+          <svg class="social-icons" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M245.7,77.7l-30.2,30.1C209.5,177.7,150.5,232,80,232c-14.5,0-26.5-2.3-35.6-6.8-7.3-3.7-10.3-7.6-11.1-8.8a8,8,0,0,1,3.9-11.9c.2-.1,23.8-9.1,39.1-26.4a108.6,108.6,0,0,1-24.7-24.4c-13.7-18.6-28.2-50.9-19.5-99.1a8.1,8.1,0,0,1,5.5-6.2,8,8,0,0,1,8.1,1.9c.3.4,33.6,33.2,74.3,43.8V88a48.3,48.3,0,0,1,48.6-48,48.2,48.2,0,0,1,41,24H240a8,8,0,0,1,7.4,4.9A8.4,8.4,0,0,1,245.7,77.7Z"></path></svg>
+        </li>
+        <li>
+          <svg class="social-icons" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><circle cx="128" cy="128" r="32"></circle><path d="M172,28H84A56,56,0,0,0,28,84v88a56,56,0,0,0,56,56h88a56,56,0,0,0,56-56V84A56,56,0,0,0,172,28ZM128,176a48,48,0,1,1,48-48A48,48,0,0,1,128,176Zm52-88a12,12,0,1,1,12-12A12,12,0,0,1,180,88Z"></path></svg>
+        </li>
+        <li>
+          <svg class="social-icons" xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="#ffffff" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M234.3,69.8a23.5,23.5,0,0,0-14.5-16.3C185.6,40.3,131,40.4,128,40.4s-57.6-.1-91.8,13.1A23.5,23.5,0,0,0,21.7,69.8C19.1,79.7,16,97.9,16,128s3.1,48.3,5.7,58.2a23.5,23.5,0,0,0,14.5,16.3c32.8,12.7,84.2,13.1,91.1,13.1h1.4c6.9,0,58.3-.4,91.1-13.1a23.5,23.5,0,0,0,14.5-16.3c2.6-9.9,5.7-28.1,5.7-58.2S236.9,79.7,234.3,69.8Zm-72.1,61.5-48,32a3.6,3.6,0,0,1-2.2.7,4.5,4.5,0,0,1-1.9-.5A3.9,3.9,0,0,1,108,160V96a3.9,3.9,0,0,1,2.1-3.5,4,4,0,0,1,4.1.2l48,32a3.9,3.9,0,0,1,0,6.6Z"></path></svg>
+        </li>
+      </ul>
+
+      <div class="Our-model">
+        <p>#1 World Best Game Store</p>
+      </div>
+
+      <div class="Rights">
+      <p>done by Faisal Saeed Bashumail code and AKalmalki design. Part of "Build Responsive Real-World Websites with HTML and CSS" project. Use for learning purposes only.</p>
+      <ul class="footer-list">
+        <li><a>PRIVACY</a></li>
+        <p>|</p>
+        <li><a>LEGAL</a></li>
+        <p>|</p>
+        <li><a>TERMS</a></li>
+        <p>|</p>
+        <li><a>COOCKE POLICY</a></li>
+      </ul>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+</body>
+<script src="game.js"></script>
+</html>
